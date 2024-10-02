@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>Marine Sacco</title>
+  </head>
+  <body class="bg-warning">
+    <div class="container py-4">
+      <div class="m-3 text-center">
+        <img src="/src/assets/logo.svg" width="15%" class="mx-auto" />
+      </div>
+      <form
+        class="col-10 mx-auto border border-success p-4 rounded"
+        id="frm-new-account"
+        method="POST"
+        action="#"
+      >
+        <div class="row">
+          <div class="col">
+            <label for="firstName" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First name"
+              aria-label="First name"
+              id="firstName"
+            />
+          </div>
+          <div class="col">
+            <label for="lastName" class="form-label">Last Name</label>
+
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last name"
+              aria-label="Last name"
+              id="lastName"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="loanAmount" class="form-label">Loan Amount</label>
+          <input
+            type="number"
+            class="form-control"
+            id="loanAmount"
+            placeholder="e.g. 9678"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="birthday" class="form-label">Birthday</label>
+          <input type="date" class="form-control" id="birthday" />
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="f"
+            id="flexRadioDefault1"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Female
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="m"
+            id="flexRadioDefault2"
+          />
+          <label class="form-check-label" for="flexRadioDefault2"> Male </label>
+        </div>
+        <div class="m-3 d-grid gap-2 d-md-block">
+          <button type="submit" class="btn btn-sm btn-outline-success">
+            Create Account
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="/src/app.js"></script>
+  </body>
+</html>
