@@ -1,17 +1,24 @@
-const bankAccounts = []
+//Business logic
 
- function handleOnSubmit(event){
-    event.preventDefault()
-    const formData = new FormData(event.target) // convert the form inputs into an object
-    bankAccounts.push(Object.fromEntries(formData.entries()))
+//generating loan account number
+const generateAccountNumber = ()=> {
 
-    console.log(Object.fromEntries(event.target.entries()))
-
-   
- }
-
-document.getElementById("frm-new-account").addEventListener('submit', handleOnSubmit)
-
- 
+}
 
 
+
+
+//UI Logic: our DOM Interaction
+const handleOnSubmit  = ()=> {
+
+}
+
+const populateTable = ()=> {
+
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+    //will be executed only after all the content of the page have loaded
+    handleOnSubmit()
+    populateTable()
+})
