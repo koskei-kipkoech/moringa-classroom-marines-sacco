@@ -1,4 +1,4 @@
-//Business logic
+/** Our Business Logic **/
 
 //generating loan account number
 const generateAccountNumber = ()=> {
@@ -8,7 +8,7 @@ const generateAccountNumber = ()=> {
 
 
 
-//UI Logic: our DOM Interaction
+/** UI Logic - Our DOM Interaction Logic **/
 const handleOnSubmit  = ()=> {
 
 }
@@ -18,7 +18,7 @@ const populateAccountsTable = ()=> {
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    //will be executed only after all the content of the page have loaded
+    //will be executed only after the content of the page has loaded
     handleOnSubmit()
     populateAccountsTable()
 })
