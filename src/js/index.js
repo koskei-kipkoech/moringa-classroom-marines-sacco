@@ -20,8 +20,7 @@ const accounts = ["Moringa", "School", "F", "7263638392", "$5000", "x"]
 const tbody = document.querySelector("#loan-accounts-table")
 const tr = document.createElement("tr") //row
 
-//button.parentElement
-//button.closest("tr")
+
  accounts.forEach((account, index)=> {
     const td = document.createElement("td")// creating table cells
     if(index === accounts.length - 1){
