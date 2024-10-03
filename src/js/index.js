@@ -42,12 +42,4 @@ const tr = document.createElement("tr") //row
 
  
  
-
- 
-
  tbody.appendChild(tr)
-
-
- //business logic
-
- //UI logic
