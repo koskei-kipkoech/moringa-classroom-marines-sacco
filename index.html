@@ -15,7 +15,7 @@
         class="col-10 mx-auto border border-success p-4 rounded"
         id="frm-new-account"
         method="POST"
-        action="#"
+        action="http://google.com"
       >
         <div class="row">
           <div class="col">
@@ -26,6 +26,7 @@
               placeholder="First name"
               aria-label="First name"
               id="firstName"
+              name="firstName"
             />
           </div>
           <div class="col">
@@ -37,6 +38,7 @@
               placeholder="Last name"
               aria-label="Last name"
               id="lastName"
+              name="lastName"
             />
           </div>
         </div>
@@ -47,20 +49,24 @@
             class="form-control"
             id="loanAmount"
             placeholder="e.g. 9678"
+            name="loanAmount"
           />
         </div>
 
         <div class="mb-3">
           <label for="birthday" class="form-label">Birthday</label>
-          <input type="date" class="form-control" id="birthday" />
+          <input type="date" class="form-control" id="birthday" name="birthday"/>
         </div>
+        <div class="mb-3">
+<br class="form-check">
+          <label for="birthday" class="form-label">Gender</label></br>
 
-        <div class="form-check">
           <input
             class="form-check-input"
             type="radio"
-            name="f"
+            name="gender"
             id="flexRadioDefault1"
+            value="F"
             checked
           />
           <label class="form-check-label" for="flexRadioDefault1">
@@ -71,17 +77,22 @@
           <input
             class="form-check-input"
             type="radio"
-            name="m"
+            name="gender"
+            value="M"
             id="flexRadioDefault2"
           />
           <label class="form-check-label" for="flexRadioDefault2"> Male </label>
         </div>
+        
         <div class="m-3 d-grid gap-2 d-md-block">
           <button type="submit" class="btn btn-sm btn-outline-success">
             Create Account
           </button>
         </div>
       </form>
+
+
+      
     </div>
     <script src="/src/app.js"></script>
   </body>

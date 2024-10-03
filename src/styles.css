@@ -1,12 +1,5 @@
 @import url("bootstrap.css");
 
 
-.container{
-    display: flex;
-    flex-direction: column;
-}
- img.marines-logo{
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
