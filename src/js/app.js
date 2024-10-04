@@ -1,43 +1,7 @@
 /** Our Business Logic **/
 
 
-let accounts = [
-   {
-        firstName: "Sarah",
-        lastName: "Davis",
-        gender: "Female",
-        accountNumber: "654123789",
-        loanAmount: 10000
-    },
-    {
-        firstName: "John",
-        lastName: "Doe",
-        gender: "Male",
-        accountNumber: "123456789",
-        loanAmount: 15000
-    },
-    {
-        firstName: "Jane",
-        lastName: "Smith",
-        gender: "Female",
-        accountNumber: "987654321",
-        loanAmount: 25000
-    },
-    {
-        firstName: "Emily",
-        lastName: "Johnson",
-        gender: "Female",
-        accountNumber: "456789123",
-        loanAmount: 5000
-    },
-    {
-        firstName: "Michael",
-        lastName: "Brown",
-        gender: "Male",
-        accountNumber: "321654987",
-        loanAmount: 20000
-    }
-];
+let accounts = [];
    
 
 //generating loan account number
@@ -54,8 +18,10 @@ const handleOnSubmit  = ()=> {
         event.preventDefault()
         const formData = new FormData(event.target)
         const newAccount = Object.fromEntries(formData.entries())
-        accounts.push(newAccount)
-        populateAccountsTable(accounts)
+        // accounts.push(newAccount)
+        populateAccountsTable(
+            [...accounts, newAccount]
+        )
     })
 }
 
@@ -88,7 +54,7 @@ const populateAccountsTable = (accounts)=> {
 
 document.addEventListener("DOMContentLoaded", function(){
     //will be executed only after the content of the page has loaded
-   
+
     handleOnSubmit()
     populateAccountsTable(accounts)
 })
