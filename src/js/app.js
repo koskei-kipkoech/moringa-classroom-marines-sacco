@@ -27,32 +27,32 @@ const handleOnSubmit  = ()=> {
 
 const populateAccountsTable = (accounts)=> {
     //The second attempt: Refactoring
-    const tbody = document.querySelector("#loan-accounts-table")
-    const rows = accounts.map((account)=> {
-        return `<tr>
-            <td>${account.firstName}</td>
-            <td>${account.lastName}</td>
-            <td>${account.gender}</td>
-            <td>${account.birthday}</td>
-            <td>${account.loanAmount}</td>
-            <td>
-                <button name="btn-remove" className="btn btn-danger btn-remove">
-                    X
-                </button>
-            </td>
-        </tr>`
-    })
-    tbody.innerHTML +=rows // adding rows to the tbody
-    //using event delegation to apply on click event on the remove buttons
-    tbody.addEventListener("click", (event)=> {
-        if(event.target.name === "btn-remove"){
-            event.target.closest('tr').remove()
-        }
-    })
+    // const tbody = document.querySelector("#loan-accounts-table")
+    // const rows = accounts.map((account)=> {
+    //     return `<tr>
+    //         <td>${account.firstName}</td>
+    //         <td>${account.lastName}</td>
+    //         <td>${account.gender}</td>
+    //         <td>${account.birthday}</td>
+    //         <td>${account.loanAmount}</td>
+    //         <td>
+    //             <button name="btn-remove" className="btn btn-danger btn-remove">
+    //                 X
+    //             </button>
+    //         </td>
+    //     </tr>`
+    // })
+    // tbody.innerHTML +=rows // adding rows to the tbody
+    // //using event delegation to apply on click event on the remove buttons
+    // tbody.addEventListener("click", (event)=> {
+    //     if(event.target.name === "btn-remove"){
+    //         event.target.closest('tr').remove()
+    //     }
+    // })
     
     //First attempt
     //This should be refactored later
-    /**const tbody = document.querySelector("#loan-accounts-table")
+    const tbody = document.querySelector("#loan-accounts-table")
     accounts.forEach((account)=> {
         const tr = document.createElement("tr")
         for(let key in account){
@@ -73,7 +73,7 @@ const populateAccountsTable = (accounts)=> {
         tr.appendChild(action)
 
         tbody.appendChild(tr)
-    })*/
+    })
 }
 
 document.addEventListener("DOMContentLoaded", function(){
